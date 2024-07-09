@@ -15,13 +15,13 @@ mqttClient.on('message', (topic, message) => {
     const sensorData = JSON.parse(data);
     SensorData.insert(sensorData.temperature, sensorData.humidity, sensorData.light, (err) => {
       if (err) {
-        console.error("Lỗi khi lưu dữ liệu vào MySQL: " + err.message);
+        console.error("Failed to save data to MySQL: " + err.message);
       } else {
-        console.log("Dữ liệu đã được lưu vào MySQL");
+        console.log("The data has been saved to MySQL");
       }
     });
   } catch (err) {
-    console.error("Lỗi khi parse dữ liệu JSON: " + err.message);
+    console.error("Failed to parse JSON data: " + err.message);
   }
 });
 
