@@ -5,7 +5,7 @@ mqttClient = mqtt.connect(process.env.MQTT_BROKER_URL)
 
 
 mqttClient.on('connect', () => {
-  console.log("Kết nối MQTT thành công");
+  console.log("Connect to MySQL successfully!");
   mqttClient.subscribe('esp32/sensor_data');
 });
 

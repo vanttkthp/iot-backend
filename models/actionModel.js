@@ -21,7 +21,7 @@ const Action = {
       });
     });
   },
-  // Other methods...
+
 };
 
 export default Action;

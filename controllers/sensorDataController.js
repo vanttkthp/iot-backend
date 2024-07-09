@@ -26,7 +26,7 @@ const SensorDataController = {
       }
     });
   },
-  // Other controller methods...
+
 };
 
 export default SensorDataController;

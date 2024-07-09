@@ -14,7 +14,7 @@ const SensorData = {
     const query = "SELECT * FROM sensor_data WHERE timestamp BETWEEN ? AND ?";
     db.query(query, [startTime, endTime], callback);
   },
-  // Other methods...
+
 };
 
 export default SensorData;

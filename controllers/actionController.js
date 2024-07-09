@@ -29,7 +29,7 @@ const ActionsController = {
       }
     });
   },
-  // Other controller methods...
+
 };
 
 export default ActionsController;
