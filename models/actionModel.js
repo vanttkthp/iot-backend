@@ -21,6 +21,12 @@ const Action = {
       });
     });
   },
+  getByPage: (pageNumber, pageSize, callback) => {
+    const offset = (pageNumber - 1) * pageSize;
+    const query =
+      "SELECT * FROM action ORDER BY timestamp DESC LIMIT ? OFFSET ?";
+    db.query(query, [parseInt(pageSize), offset], callback);
+  },
 
 };
 

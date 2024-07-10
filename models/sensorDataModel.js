@@ -14,7 +14,12 @@ const SensorData = {
     const query = "SELECT * FROM sensor_data WHERE timestamp BETWEEN ? AND ?";
     db.query(query, [startTime, endTime], callback);
   },
-
+  getByPage: (pageNumber, pageSize, callback) => {
+    const offset = (pageNumber - 1) * pageSize;
+    const query =
+      "SELECT * FROM sensor_data ORDER BY timestamp DESC LIMIT ? OFFSET ?";
+    db.query(query, [parseInt(pageSize), offset], callback);
+  },
 };
 
 export default SensorData;
