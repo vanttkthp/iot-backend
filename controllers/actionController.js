@@ -1,4 +1,8 @@
 import Action from "../models/actionModel.js";
+import mqtt from "mqtt";
+
+
+const mqttClient = mqtt.connect(process.env.MQTT_BROKER_URL);
 
 const ActionsController = {
   controlLed: (req, res) => {
